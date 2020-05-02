@@ -22,7 +22,7 @@ export default function nav() {
                 <div id="navbarBasicExample" class="navbar-menu">
                     <div class="navbar-end">
                         <Link to='/weather'><a class="navbar-item">Weather</a></Link>
-                        <Link><a class="navbar-item">Convid</a></Link>
+                        <Link to='/convid'><a class="navbar-item">Convid</a></Link>
                         <Link to='/login'><a class="navbar-item">login</a></Link>
                         <Link to='/register'><a class="navbar-item">Register</a></Link>
                     </div>

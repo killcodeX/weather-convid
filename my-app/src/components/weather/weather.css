@@ -10,3 +10,17 @@
     align-items: flex-end;
     justify-content: flex-end;
 }
+.button{
+    background-color: #ffc30b !important;
+    border: none;
+    color: white;
+}
+.weather-display{
+    position: relative;
+    bottom: -200px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.252);
+    color: white;
+    font-size: 1.2rem;
+    height: 30vh;
+}
