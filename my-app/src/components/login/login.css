@@ -29,6 +29,8 @@ form{
     border-bottom:1px solid black !important;
     background: transparent;
     margin-bottom: 10px;
+    box-shadow: unset;
+    border-radius: 0px;
 }
 .fa-lock, .fa-user{
     color: black;
