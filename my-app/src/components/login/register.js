@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import './register.css';
 
 function Register (props) {
 
-    const [name, setName] = useState();
-    const [email, setEmail] = useState();
-    const [password, setPassword] = useState();
-    const [cpassword, setCpassword] = useState();
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [cpassword, setCpassword] = useState('');
+    const [checkb, setCheckb] = useState('false');
 
     const handleSubmit =(e) =>{
         e.preventDefault();
-        alert(`Submitting Name ${name}`);
-        alert(`Submitting Email ${email}`);
-        alert(`Submitting Passowrd ${password}`);
-        alert(`Submitting Cpassword ${cpassword}`);
+        // alert(`Submitting Name ${name}`);
+        // alert(`Submitting Email ${email}`);
+        // alert(`Submitting Passowrd ${password}`);
+        // alert(`Submitting Cpassword ${cpassword}`);
+        alert(`Submitting Checkbox ${checkb}`);
     }
 
     return (
@@ -65,7 +66,7 @@ function Register (props) {
                                     <div className="field">
                                         <div className="control">
                                             <label className="checkbox">
-                                                <input type="checkbox"/> I agree all the statements in <a href="#">Terms of service</a>
+                                                <input type="checkbox" onChange={e=> setCheckb(e.target.checked)} /> I agree all the statements in <a href="#">Terms of service</a>
                                             </label>
                                         </div>
                                     </div>
