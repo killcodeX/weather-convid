@@ -1,9 +1,13 @@
 import React, {useState} from 'react';
+import stateData from './state_wise_data.csv'
 import './convid.css';
 
 function Convid() {
-
+    // hooks to store state names
     const [city, setCity] = useState('');
+
+    // cvs reader
+    // const handleForce = (data, fileInfo) => console.log(data, fileInfo);
 
     const handleSubmit =(e) =>{
         e.preventDefault();
@@ -15,7 +19,7 @@ function Convid() {
                 <div className="container">
                     <h1 className="has-text-centered">Total number of cases India</h1>
                     <h1 className="has-text-centered">is: value</h1>
-                    <h2 className="has-text-centered">Here are the total cases in each state you can serch it</h2>
+                    <h2 className="has-text-centered">Here are the total cases in each state you can search it</h2>
                     <form onSubmit={handleSubmit}>
                         <div class="field">
                             <p class="control has-icons-left has-icons-right">
