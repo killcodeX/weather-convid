@@ -1,0 +1,57 @@
+#login{
+    height:100vh;
+    background: #f2f2f5;
+}
+.box{
+    padding: 100px;
+}
+.sign-img{
+    display: flex;
+    justify-content: center;
+    margin-left: 90px;
+    margin-bottom: 30px;
+}
+.nacc{
+    margin-left: 110px;
+}
+.title{
+    font-size: 2rem;
+    font-weight: bold;
+}
+form{
+    margin-top: 50px;
+}
+.input{
+    width:350px;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom:1px solid black !important;
+    background: transparent;
+    margin-bottom: 10px;
+}
+.fa-lock, .fa-user{
+    color: black;
+}
+.button{
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+.fa-facebook-square{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1.5rem;
+    color: blue;
+}
+.fa-twitter-square{
+    margin-left: 0px;
+    margin-right: 10px;
+    font-size: 1.5rem;
+    color: blue;
+}
+.fa-google-plus-square{
+    margin-left: 0px;
+    margin-right: 10px;
+    font-size: 1.5rem;
+    color: red;
+}

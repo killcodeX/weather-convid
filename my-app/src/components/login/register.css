@@ -1,0 +1,38 @@
+#register{
+    background: #f2f2f5;
+}
+.box{
+    padding: 100px;
+}
+.title{
+    font-size: 2rem;
+    font-weight: bold;
+}
+form{
+    margin-top: 50px;
+}
+.input{
+    width:350px;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom:1px solid black !important;
+    background: transparent;
+    margin-bottom: 10px;
+}
+.fa-lock, .fa-user, .fa-envelope{
+    color: black;
+}
+.button{
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+.reg-img{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.reg {
+    display: flex;
+    justify-content: center;
+  }

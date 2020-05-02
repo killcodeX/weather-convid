@@ -1,0 +1,9 @@
+nav{
+    min-height: 20vh;
+}
+.navbar-end{
+    margin-right: 40px;
+}
+.navbar-item{
+    font-size: 17px;
+}
