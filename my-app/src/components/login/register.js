@@ -9,13 +9,40 @@ function Register (props) {
     const [cpassword, setCpassword] = useState('');
     const [checkb, setCheckb] = useState('false');
 
+    const validateForm = () =>{
+        var bool = false;
+        if(name == ''){
+            alert('please enter your name');
+            return bool;
+        }
+        else if(email == ''){
+            if(typeof email !== "undefined"){
+                let lastAtPos = email.lastIndexOf('@');
+                let lastDotPos = email.lastIndexOf('.');
+     
+                if (!(lastAtPos < lastDotPos && lastAtPos > 0 && email.indexOf('@@') == -1 && lastDotPos > 2 && (email.length - lastDotPos) > 2)) {
+                   alert("Email is not valid");
+                 }
+            }  
+        }
+        else if (password == ''){
+            alert("please enter password")
+            return bool;
+        }
+        else if (password != cpassword){
+            alert("password dosen't match")
+            return (bool);
+        }
+        else if (checkb == false){
+            alert("please checkin the checkbox");
+            return bool;
+        }
+    }
     const handleSubmit =(e) =>{
         e.preventDefault();
-        // alert(`Submitting Name ${name}`);
-        // alert(`Submitting Email ${email}`);
-        // alert(`Submitting Passowrd ${password}`);
-        // alert(`Submitting Cpassword ${cpassword}`);
-        alert(`Submitting Checkbox ${checkb}`);
+        if(validateForm() == false){
+            alert('this works');
+        }
     }
 
     return (
