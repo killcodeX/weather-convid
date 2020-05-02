@@ -1,8 +1,49 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './login.css';
 
-function Login (props) {
-    
+function Login () {
+
+    // hooks for validation
+    const [name, setName] = useState('');
+    const [password, setPassword] = useState('');
+    const [data, setData] = useState('');
+
+    useEffect(() => {
+        // code to run on component mount
+        fetch("https://sheetsu.com/apis/v1.0su/ac25abd2d8c3")
+            .then( (response) => {
+                return response.json()
+            }).then( (json) => {
+                setData(json);
+            });
+      }, []);
+
+      const validateForm = () =>{
+        var bool = false;
+        if(name == ''){
+            alert('please enter your name');
+            return bool;
+        }
+        else if (password == ''){
+            alert("please enter password")
+            return bool;
+        }
+      }
+    const handleSubmit =(e) =>{
+        e.preventDefault();
+        if(validateForm() == true){
+            alert('this not works');
+        }
+        else{
+            // var log_name = JSON.stringify(data);
+            var current_user = data.filter(row => row.name == 'dilliban' )[0];
+            console.log(current_user);
+            console.log(current_user.password)
+        }
+    };
+
+
+        
     return (
         <div>
             <section className="section" id="login">
@@ -15,11 +56,11 @@ function Login (props) {
                             </div>
                             <div className="column">
                                 <h1 className="title"> Sign Up</h1>
-                                <form>
+                                <form onSubmit={handleSubmit}>
                                     <div className="field">
                                         <p className="control has-icons-left">
                                             <input className="input" type="text" placeholder="Your Name"
-                                            />
+                                            value={name} onChange={e => setName(e.target.value)}/>
                                             <span className="icon is-small is-left">
                                                 <i class="fas fa-user"></i>
                                             </span>
@@ -28,7 +69,7 @@ function Login (props) {
                                     <div className="field">
                                         <p className="control has-icons-left">
                                             <input className="input" type="password" placeholder="Password"
-                                            />
+                                            value={password} onChange={e => setPassword(e.target.value)}/>
                                             <span className="icon is-small is-left">
                                                 <i class="fas fa-lock"></i>
                                             </span>
@@ -41,7 +82,7 @@ function Login (props) {
                                     </div>
                                     <div className="field">
                                         <div className="control">
-                                            <button className="button is-link" onClick={()=>this.login()}>Submit</button>
+                                            <button className="button is-link">Submit</button>
                                         </div>
                                     </div>
                                 </form>
