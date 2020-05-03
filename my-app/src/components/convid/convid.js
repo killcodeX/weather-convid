@@ -25,7 +25,7 @@ function Convid() {
                     <h2 className="has-text-centered">Here are the total cases in each state you can search it</h2>
                     <form onSubmit={handleSubmit}>
                         <div class="field">
-                            <p class="control has-icons-left has-icons-right">
+                            <p class="control has-icons-left">
                                 <input class="input" type="text" placeholder="States"
                                 value={city} onChange={e => setCity(e.target.value)}/>
                                 <span class="icon is-small is-left">

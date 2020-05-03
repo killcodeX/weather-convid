@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import {
+    Redirect, useHistory
+  } from "react-router-dom";
 import './login.css';
 import Nav from '../nav';
 
 function Login () {
 
+    var history = useHistory();
     // hooks for validation
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
@@ -29,26 +33,23 @@ function Login () {
             alert("please enter password")
             return bool;
         }
+        return !bool;
       }
     const handleSubmit =(e) =>{
         e.preventDefault();
-        if(validateForm() == true){
-            alert('this not works');
-        }
-        else{
-            // var log_name = JSON.stringify(data);
-            // var current_user = data.filter(row => row.name == 'dilliban' )[1];
-            // console.log(data[0].name);
-            // console.log(current_user.password)
-            // console.log(typeof data[0].name);
-            // console.log(data[1].name);
-            // console.log(typeof data[0].password);
-            // console.log(data[1].password);
-            if(((data[0].name === 'aaquib') || (data[1].name === 'diliban')) && ((data[0].password === '12345678') || (data[1].password === '12345'))){
-                console.log('login succcess')
-            }
-            else{
-                console.log('login sucks')
+        if(validateForm()){
+            var log_name = JSON.stringify(data);
+            var current_user = data.filter(row => row.name == name )[0];
+            if(current_user){
+                console.log('user Exists');
+                if(current_user.password == password){
+                    history.push('/convid');
+                }
+                else{
+                    alert('password is wrong');
+                }
+            } else {
+                alert('invalid user')
             }
         }
     };
