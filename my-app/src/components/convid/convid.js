@@ -12,6 +12,7 @@ function Convid() {
 
     const handleSubmit =(e) =>{
         e.preventDefault();
+        console.log(city);
     }
 
     return (

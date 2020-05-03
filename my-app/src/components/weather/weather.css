@@ -5,12 +5,12 @@
     background-size: cover;
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.6);
 }
-.dropdown{
+.drop{
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
 }
-.button{
+.select{
     background-color: #ffc30b !important;
     border: none;
     color: white;
@@ -23,4 +23,32 @@
     color: white;
     font-size: 1.2rem;
     height: 30vh;
+}
+.humid span{
+    font-size: 1.5rem;
+}
+.humid p{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.ico{
+    height: 30px;
+    padding-left: 10px;
+}
+.temp p{
+    font-size: 7rem;
+    font-weight: bold;
+}
+.date{
+    font-size: 1.2rem;
+    color: white;
+}
+.city{
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+}
+.details{
+    position: relative;
+    top:100px
 }
