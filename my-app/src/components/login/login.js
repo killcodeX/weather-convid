@@ -39,6 +39,7 @@ function Login () {
         e.preventDefault();
         if(validateForm()){
             var log_name = JSON.stringify(data);
+            console.log(log_name);
             var current_user = data.filter(row => row.name == name )[0];
             if(current_user){
                 console.log('user Exists');

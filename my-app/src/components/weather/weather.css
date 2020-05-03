@@ -8,12 +8,11 @@
 .drop{
     display: flex;
     align-items: flex-end;
-    justify-content: flex-end;
+    justify-content: flex-end; 
 }
-.select{
-    background-color: #ffc30b !important;
-    border: none;
-    color: white;
+#weather .select{
+    background: white;
+    border-radius: 20px;
 }
 .weather-display{
     position: relative;
