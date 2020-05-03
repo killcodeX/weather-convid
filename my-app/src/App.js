@@ -5,6 +5,7 @@ import Login from './components/login/login';
 import Register from './components/login/register';
 import Weather from './components/weather/weather';
 import Convid from './components/convid/convid';
+import Logout from './components/login/logout';
 import {
   BrowserRouter as Router,
   Switch,
@@ -16,10 +17,10 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Nav/>
+        {/* <Nav/> */}
         <Switch>
-          <Route path='/' exact component={Home}/>
-          <Route path='/login' component={Login}/>
+          <Route path='/' exact component={Login}/>
+          <Route path='/logout' component={Logout}/>
           <Route path='/register' component={Register}/>
           <Route path='/weather' component={Weather}/>
           <Route path='/convid' component={Convid}/>
@@ -29,8 +30,5 @@ function App() {
   );
 }
 
-function Home() {
-  return <h2>Home</h2>;
-}
 
 export default App;

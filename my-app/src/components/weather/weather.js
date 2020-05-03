@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Nav from '../nav';
 import './weather.css';
 
 // 
@@ -25,6 +26,7 @@ export default class weather extends Component {
     render() {
         return (
             <div>
+                <Nav/>
                 <section className="section" id="weather">
                     <div className="container">
                         <div class="dropdown">

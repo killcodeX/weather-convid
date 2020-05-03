@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './login.css';
+import Nav from '../nav';
 
 function Login () {
 
@@ -36,9 +37,19 @@ function Login () {
         }
         else{
             // var log_name = JSON.stringify(data);
-            var current_user = data.filter(row => row.name == 'dilliban' )[0];
-            console.log(current_user);
-            console.log(current_user.password)
+            // var current_user = data.filter(row => row.name == 'dilliban' )[1];
+            // console.log(data[0].name);
+            // console.log(current_user.password)
+            // console.log(typeof data[0].name);
+            // console.log(data[1].name);
+            // console.log(typeof data[0].password);
+            // console.log(data[1].password);
+            if(((data[0].name === 'aaquib') || (data[1].name === 'diliban')) && ((data[0].password === '12345678') || (data[1].password === '12345'))){
+                console.log('login succcess')
+            }
+            else{
+                console.log('login sucks')
+            }
         }
     };
 
@@ -46,6 +57,7 @@ function Login () {
         
     return (
         <div>
+            <Nav/>
             <section className="section" id="login">
                 <div className="container">
                     <div className="box">

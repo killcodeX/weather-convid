@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './register.css';
+import Nav from '../nav';
 
 // dtatabase api
 // const SPREADHEET_ID = '1j8CwAzsUhVYNM3C1f3C1NZhV3JFot22FdU-Qkvo_hG0';
@@ -91,6 +92,7 @@ function Register () {
 
     return (
         <div>
+            <Nav/>
             <section className="section" id="register">
                 <div className="container">
                     <div className="box">

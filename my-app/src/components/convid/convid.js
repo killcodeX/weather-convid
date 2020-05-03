@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import stateData from './state_wise_data.csv'
+import Nav from '../nav';
+import stateData from './state_wise_data.csv';
 import './convid.css';
 
 function Convid() {
@@ -15,6 +16,7 @@ function Convid() {
 
     return (
         <div>
+            <Nav/>
             <section className="section" id="convid">
                 <div className="container">
                     <h1 className="has-text-centered">Total number of cases India</h1>

@@ -4,6 +4,7 @@ import './nav.css';
 import {Link} from 'react-router-dom';
 
 export default function nav() {
+    const login=true;
     return (
         <div>
             <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -23,7 +24,10 @@ export default function nav() {
                     <div class="navbar-end">
                         <Link to='/weather'><a class="navbar-item">Weather</a></Link>
                         <Link to='/convid'><a class="navbar-item">Convid</a></Link>
-                        <Link to='/login'><a class="navbar-item">login</a></Link>
+                        {
+                            login==true? <Link to='/logout'><a class="navbar-item">Logout</a></Link>
+                            : <Link to='/'><a class="navbar-item">Login</a></Link>
+                        }
                         <Link to='/register'><a class="navbar-item">Register</a></Link>
                     </div>
                 </div>

@@ -32,6 +32,7 @@ form{
 .reg-img{
     display: flex;
     justify-content: center;
+    margin-left:120px;
     margin-bottom: 20px;
 }
 .reg {
