@@ -3,8 +3,19 @@ import logo from '../logo.png';
 import './nav.css';
 import {Link} from 'react-router-dom';
 
+const fakeAuthCentralState = {
+    isAuthenticated: false,
+    authenticate(callback) {
+       this.isAuthenticated = true;
+       setTimeout(callback, 300);
+    },
+    signout(callback) {
+       this.isAuthenticated = false;
+       setTimeout(callback, 300); 
+    }
+ };
+
 export default function nav() {
-    const login=true;
     return (
         <div>
             <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -25,7 +36,7 @@ export default function nav() {
                         <Link to='/weather'><a class="navbar-item">Weather</a></Link>
                         <Link to='/convid'><a class="navbar-item">Convid</a></Link>
                         {
-                            login==true? <Link to='/logout'><a class="navbar-item">Logout</a></Link>
+                            fakeAuthCentralState==true? <Link to='/logout'><a class="navbar-item">Logout</a></Link>
                             : <Link to='/'><a class="navbar-item">Login</a></Link>
                         }
                         <Link to='/register'><a class="navbar-item">Register</a></Link>
